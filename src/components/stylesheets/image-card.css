@@ -1,0 +1,14 @@
+.image-card {
+    width: 100%; 
+    height: 18.75rem;
+    object-fit: cover;
+
+}
+
+.card-header {
+    font-weight: bold;
+}
+
+.card-button {
+    padding: 0; 
+}
