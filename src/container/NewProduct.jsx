@@ -5,7 +5,7 @@ import {Container} from 'react-bootstrap';
 
 const NewProduct = () => {
 
-    const [data, setData] = useState({title: "", description:"", price:"", difficulty:"", duration:"", players:"", image:"" })
+    const [data, setData] = useState({title: "", description:"", price:"", difficulty:"", duration:"", players:"", image:"", publisher:"", age:"", genre:"" })
 
     const handleChange=((target) => {
         console.log('Loading');
@@ -42,6 +42,18 @@ const NewProduct = () => {
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label> Game Duration </Form.Label>
                         <Form.Control type="text" placeholder="Enter average game duration" name="duration" value={data.duration}/>
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label> Product Publisher </Form.Label>
+                        <Form.Control type="text" placeholder="Product Publisher" name="publisher" value={data.publisher}/>
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label> Recommended age </Form.Label>
+                        <Form.Control type="text" placeholder="Product recommended age" name="age" value={data.age}/>
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label> Product Genre </Form.Label>
+                        <Form.Control type="text" placeholder="Product main genre" name="genre" value={data.genre}/>
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label> Product Image </Form.Label>
