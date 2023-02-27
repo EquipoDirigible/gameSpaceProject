@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 
 function NewNavbar() {
   return (
-    <Navbar className='navbarcolor' expand="lg">
+    <Navbar className='navbarcolor' expand="lg" fixed="top" >
       <Container fluid>
         <Navbar.Brand href="#">Game-Space</Navbar.Brand>
         <img src="src\assets\logo-navbar.png" className='LogoGameSpaceNavbar'/>
@@ -23,16 +23,7 @@ function NewNavbar() {
           >
              <Link to="/" className="navbar-brand">Home</Link>
              <Link to="/new" className="nav-link"> New </Link> 
-            {/* <Nav.Link href="#action1">Your Products</Nav.Link>
-            <Nav.Link href="#action2">Mail</Nav.Link>
-            <Nav.Link href="#action2">Favorites</Nav.Link>
-            <Nav.Link href="#action2">Sold</Nav.Link>
-            <Nav.Link href="#action2">Stadistics</Nav.Link>
-            <Nav.Link href="#action2">Wallet</Nav.Link>
-            <Nav.Link href="#action2">Configuration</Nav.Link>
-            <Nav.Link href="#" disabled>
-              Link
-            </Nav.Link> */}
+            
           </Nav>
           <Form className="d-flex">
             <Form.Control
