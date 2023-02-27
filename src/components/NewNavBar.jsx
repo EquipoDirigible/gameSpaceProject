@@ -5,9 +5,9 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import './NavScrollExample.css'
+import './stylesheets/NewNavbar.css'
 
-function NavScrollExample() {
+function NewNavbar() {
   return (
     <Navbar className='navbarcolor' expand="lg">
       <Container fluid>
@@ -47,4 +47,4 @@ function NavScrollExample() {
   );
 }
 
-export default NavScrollExample;
+export default NewNavbar;
