@@ -41,3 +41,9 @@
     color: #888;
   } 
   
+  .container-background {
+    background-image: url("src/assets/bg.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: repeat;
+  }
