@@ -9,11 +9,11 @@ import '../container/App.css'
 const App = () => {
   return (
     
-    <Container fluid> 
+    <div> 
     <NewNavbar/> 
       <h1 className="text-center"> List of products  </h1>
       <ListProducts/>
-    </Container>
+    </div>
 
   )
 }
