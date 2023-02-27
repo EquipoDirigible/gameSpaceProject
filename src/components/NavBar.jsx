@@ -8,7 +8,7 @@ const NavBar = () => {
     <>
       <Navbar bg="dark" variant="dark">
         <Container fluid>
-            <Link to="/" className="navbar-brand"> Inicio </Link>
+            <Link to="/" className="navbar-brand"> Index </Link>
             <Nav className="me-auto">
                 <Link to="/new" className="nav-link"> New </Link> 
             </Nav>
