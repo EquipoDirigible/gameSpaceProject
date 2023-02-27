@@ -6,6 +6,7 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import './stylesheets/NewNavbar.css'
+import { Link } from 'react-router-dom';
 
 function NewNavbar() {
   return (
@@ -20,8 +21,9 @@ function NewNavbar() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            
-            <Nav.Link href="#action1">Your Products</Nav.Link>
+             <Link to="/" className="navbar-brand">Home</Link>
+             <Link to="/new" className="nav-link"> New </Link> 
+            {/* <Nav.Link href="#action1">Your Products</Nav.Link>
             <Nav.Link href="#action2">Mail</Nav.Link>
             <Nav.Link href="#action2">Favorites</Nav.Link>
             <Nav.Link href="#action2">Sold</Nav.Link>
@@ -30,7 +32,7 @@ function NewNavbar() {
             <Nav.Link href="#action2">Configuration</Nav.Link>
             <Nav.Link href="#" disabled>
               Link
-            </Nav.Link>
+            </Nav.Link> */}
           </Nav>
           <Form className="d-flex">
             <Form.Control
