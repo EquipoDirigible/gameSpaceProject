@@ -23,20 +23,22 @@ const ProductCard = ({product}) => {
                     <div className="d-grid gap-2"> 
                         <Button variant="secondary"> Edit </Button>  
                         <Button variant="secondary"> Delete </Button> 
-                        <Button variant="secondary"> Favorite </Button> 
+                        <Button variant="secondary"> Favorite </Button>
+                        <Button variant="secondary" onClick={handleShow}>More details </Button>
+                        <Card.Footer className="text-muted, text-center">Last update: 1 month ago</Card.Footer> 
                     </div>
-                    <ListGroup> 
+                    {/* <ListGroup> 
                         <ListGroupItem> <strong> </strong> {product.description}</ListGroupItem>
-                        {/* <ListGroupItem> <stron> Difficulty: </stron> {product.difficulty}</ListGroupItem>
+                        <ListGroupItem> <stron> Difficulty: </stron> {product.difficulty}</ListGroupItem>
                         <ListGroupItem> <stron>Price 🇪🇺: </stron> {product.price}</ListGroupItem>
                         <ListGroupItem> <stron> Game time in minutes: </stron> {product.duration}</ListGroupItem>
-                        <ListGroupItem> <stron> Max number of players: </stron> {product.players}</ListGroupItem> */}
+                        <ListGroupItem> <stron> Max number of players: </stron> {product.players}</ListGroupItem> 
 
-                            <Button variant="secondary" onClick={handleShow}>More details </Button>
+                             <Button variant="secondary" onClick={handleShow}>More details </Button> 
 
 
-                            <Card.Footer className="text-muted, text-center">Last update: 1 month ago</Card.Footer>
-                    </ListGroup>
+                             <Card.Footer className="text-muted, text-center">Last update: 1 month ago</Card.Footer> 
+                    </ListGroup> */}
                 </Card.Body>
             </Card>
             <MoreDetails show={show} handleClose={handleClose}/> 
