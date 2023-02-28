@@ -4,7 +4,7 @@ import Modal from 'react-bootstrap/Modal';
 
 const MoreDetails = ({show, handleClose}) =>{
     return(
-        <Modal show={show} onHide={handleClose}>
+        <Modal show={show} onHide={handleClose} size="lg">
         <Modal.Header closeButton>
           <Modal.Title>Modal heading</Modal.Title>
         </Modal.Header>
