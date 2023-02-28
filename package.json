@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "start-server": "json-server --watch --port 3000 ./api/products.json"
+    "start-server": "json-server --watch --port 3000 ./api/products.json",
+    "test": "vitest"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
@@ -22,9 +23,12 @@
     "react-router-dom": "^6.8.1"
   },
   "devDependencies": {
+    "@testing-library/react": "^14.0.0",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react-swc": "^3.0.0",
-    "vite": "^4.1.0"
+    "jsdom": "^21.1.0",
+    "vite": "^4.1.0",
+    "vitest": "^0.29.2"
   }
 }
