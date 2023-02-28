@@ -5,17 +5,11 @@ import {Container} from 'react-bootstrap';
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col';
 import axios from 'axios';
+import Swal from 'sweetalert2'
+import { useNavigate } from 'react-router-dom'; 
 
 const NewProduct = () => {
-
-      //  const [data, setData] = useState({title: "", description:"", price:"", difficulty:"", duration:"", players:"", image:"", publisher:"", age:"", genre:"" })
-
-       // const handleChange=((target) => {
-    //     setData({
-    //         ...data,
-    //         [target.title]: target.value
-    //     })
-    // })
+    const navigate = useNavigate.apply()
 
     const URL = "http://localhost:3000/products" 
 
@@ -85,7 +79,27 @@ const NewProduct = () => {
                 productImage};
                 
         const response = await axios.post(URL, newProduct);
-        console.log(response);
+        if (response.status === 201) {
+            Swal.fire({
+                icon: 'success',
+                title: 'New product added',
+                showConfirmButton: true,
+                showClass: {
+                    popup: 'animate__animated animate__fadeInDown'
+                  },
+                  hideClass: {
+                    popup: 'animate__animated animate__fadeOutUp'
+                  }
+              })
+              navigate('/');
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Something went wrong',
+                footer: 'Did you type every field in the form?'
+            })
+        }
 
     }
 
