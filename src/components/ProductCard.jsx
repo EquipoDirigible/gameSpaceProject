@@ -1,7 +1,7 @@
 import React , { useState } from 'react';
 import {Card , ListGroup, ListGroupItem, Button} from 'react-bootstrap';
 import MoreDetails from './MoreDetails';
-import './stylesheets/image-card.css';  
+import './stylesheets/ProductCard.css';  
 import { BsGearWide } from 'react-icons/bs';
 import { BsFillXCircleFill } from 'react-icons/bs';
 import { BsFillSuitHeartFill } from 'react-icons/bs';
@@ -23,13 +23,14 @@ const ProductCard = ({product}) => {
                     </Card.Header>
                 <img src={product.image} alt={product.title} className="card-img-top image-card"/> 
                 <Card.Body> 
-                    <div className="d-grid gap-2"> 
-                        <Button variant="secondary"><BsGearWide /></Button>  
-                        <Button variant="secondary"> <BsFillXCircleFill /></Button> 
-                        <Button variant="secondary"> <BsFillSuitHeartFill /> </Button> 
+                    <div className="d-grid gap-2" className="ButtonMethod"> 
+                        <Button className="Method" variant="secondary"><BsGearWide /></Button>  
+                        <Button className="Method" variant="secondary"> <BsFillXCircleFill /></Button> 
+                        <Button className="Method" variant="secondary"> <BsFillSuitHeartFill /> </Button> 
                     </div>
+                    <MoreDetails show={show} handleClose={handleClose}/> 
                     <ListGroup> 
-                        <ListGroupItem> <strong> </strong> {product.description}</ListGroupItem>
+                        {/* <ListGroupItem> <strong> </strong> {product.description}</ListGroupItem> */}
                         {/* <ListGroupItem> <stron> Difficulty: </stron> {product.difficulty}</ListGroupItem>
                         <ListGroupItem> <stron>Price 🇪🇺: </stron> {product.price}</ListGroupItem>
                         <ListGroupItem> <stron> Game time in minutes: </stron> {product.duration}</ListGroupItem>
@@ -42,7 +43,7 @@ const ProductCard = ({product}) => {
                     </ListGroup>
                 </Card.Body>
             </Card>
-            <MoreDetails show={show} handleClose={handleClose}/> 
+           
         </div>
          </> 
     )
