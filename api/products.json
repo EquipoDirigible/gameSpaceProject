@@ -1,3 +1,24 @@
 {
-  "products": []
+  "products": [
+    {
+      "id": 1,
+      "title": "Root",
+      "description": "Decide the fate of the forest as woodland factions fight for contrasting goals.",
+      "price": "20€",
+      "difficulty": "Normal",
+      "duration": 60,
+      "players": 4,
+      "image": "https://cf.geekdo-images.com/JUAUWaVUzeBgzirhZNmHHw__itemrep/img/sQgkl-_hydBVvQHAMLt2Zk_3dwI=/fit-in/246x300/filters:strip_icc()/pic4254509.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Sail",
+      "description": "Navigate your pirate ship together through turbulent waters and avoid the Kraken!",
+      "price": "15€",
+      "difficulty": "Easy",
+      "duration": 20,
+      "players": 2,
+      "image": "https://cf.geekdo-images.com/WdYRHQ_ILHTV_ECMGF27Gw__itemrep/img/1c7zshiWMvra-pEdBUnD0Lf0BPE=/fit-in/246x300/filters:strip_icc()/pic7267575.jpg"
+    }
+  ]
 }

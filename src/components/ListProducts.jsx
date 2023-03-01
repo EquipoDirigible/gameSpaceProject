@@ -12,14 +12,15 @@ const ListProducts = () => {
         return response; 
     }
     // UseState para grabar la información como estado, cada vez que cambie vuelve a renderizarse
-    const [list, setList] = useState([])
+    const [list, setList] = useState([]);
+    const [updateList, setUpdateList] = useState(false);
 
     useEffect(() => {
         // UseEffect Body se ejecuta desde el principio de la aplicación 
         getData().then((response) => {
             setList(response.data);
         })
-    }, [])
+    }, [updateList])
 
     return (
         <Container className="mb-5"> 
@@ -29,6 +30,8 @@ const ListProducts = () => {
                     <ProductCard
                         key={index}
                         product ={product}
+                        setUpdateList={setUpdateList}
+                        updateList={updateList}
                     />
                 ))
             } 

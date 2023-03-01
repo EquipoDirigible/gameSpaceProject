@@ -5,7 +5,7 @@ import {Container} from 'react-bootstrap';
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col';
 import axios from 'axios';
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom'; 
 
 const NewProduct = () => {

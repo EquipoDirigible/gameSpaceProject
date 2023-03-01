@@ -1,17 +1,11 @@
-import React from 'react';
+import React, { useEffect , useState} from 'react';
 import {Card , ListGroup, ListGroupItem, Button} from 'react-bootstrap';
 import './stylesheets/image-card.css';  
-import axios from 'axios';
-// import {Link} from "react-router-dom";
+import { handleDelete } from './DeleteProduct';
+
 
 const ProductCard = ({product}) => {
-
-    const URL = "http://localhost:3000/products";
-
-    const handleDelete = async () => {
-        const response = await axios.delete(`${URL}/${product.id}`);
-        console.log(response); 
-     }
+    
 
     return (
         <div className="col-3">
@@ -23,7 +17,7 @@ const ProductCard = ({product}) => {
                 <Card.Body> 
                     <div className="d-grid gap-2"> 
                         <Button variant="secondary"> Edit </Button>  
-                        <Button variant="secondary" onClick={handleDelete()}> Delete </Button> 
+                        <Button variant="secondary" onClick={() => handleDelete(product.id)}> Delete </Button> 
                         <Button variant="secondary"> Favorite </Button> 
                     </div>
                     <ListGroup> 
@@ -41,4 +35,5 @@ const ProductCard = ({product}) => {
     )
 }
 
+                    
 export default ProductCard 
