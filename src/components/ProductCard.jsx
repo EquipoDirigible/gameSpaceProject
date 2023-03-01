@@ -41,7 +41,7 @@ const ProductCard = ({product}) => {
                     </ListGroup> */}
                 </Card.Body>
             </Card>
-            <MoreDetails show={show} handleClose={handleClose}/> 
+            <MoreDetails show={show} handleClose={handleClose} product={product}/> 
         </div>
          </> 
     )

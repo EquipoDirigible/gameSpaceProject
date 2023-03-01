@@ -3,13 +3,13 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Card from 'react-bootstrap/Card';
 
-const MoreDetails = ({show, handleClose}) =>{
-
-
+const MoreDetails = ({show, handleClose, product} ) =>{
+console.log(product)
+  
     return(
         <Modal show={show} onHide={handleClose} size="lg">
         <Modal.Header closeButton>
-          <Modal.Title>TITLE</Modal.Title>
+          <Modal.Title>{product.title}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
                       <Card style={{ width: '90%' }}>
