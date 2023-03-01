@@ -12,7 +12,7 @@ console.log(product)
           <Modal.Title>{product.price} - {product.title}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-                      <Card style={{ width: '90%' }}>
+                      <Card style={{ width: '90%' }} border="light">
                     <Card.Img variant="top" src={product.image} />
                     <Card.Body>
                       {/* <Card.Title>Card Title</Card.Title> */}
