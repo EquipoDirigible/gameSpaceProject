@@ -4,7 +4,7 @@ import MoreDetails from './MoreDetails';
 import './stylesheets/ProductCard.css';  
 import { BsGearWide } from 'react-icons/bs';
 import { BsFillXCircleFill } from 'react-icons/bs';
-import { BsFillSuitHeartFill } from 'react-icons/bs';
+import { BsStarFill } from 'react-icons/bs';
 // import {Link} from "react-router-dom";
 
 
@@ -23,10 +23,10 @@ const ProductCard = ({product}) => {
                     </Card.Header>
                 <img src={product.image} alt={product.title} className="card-img-top image-card"/> 
                 <Card.Body> 
-                    <div className="d-grid gap-2" className="ButtonMethod"> 
+                    <div /*className="d-grid gap-2"*/ className="ButtonMethod"> 
                         <Button className="Method" variant="secondary"><BsGearWide /></Button>  
                         <Button className="Method" variant="secondary"> <BsFillXCircleFill /></Button> 
-                        <Button className="Method" variant="secondary"> <BsFillSuitHeartFill /> </Button> 
+                        <Button className="Method" variant="secondary"> <BsStarFill /> </Button> 
                     </div>
                     <MoreDetails show={show} handleClose={handleClose}/> 
                     <ListGroup> 

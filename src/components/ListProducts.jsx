@@ -22,18 +22,20 @@ const ListProducts = () => {
     }, [])
 
     return (
-        <Container className="mb-5"> 
-            <Row>  
-            {
-                list.map((product, index) => (
-                    <ProductCard
+        <div className="ProductContainer">
+            <Container className="mb-5"> 
+                <Row>  
+                    {
+                        list.map((product, index) => (
+                        <ProductCard
                         key={index}
                         product ={product}
-                    />
-                ))
-            } 
-            </Row>
-        </Container>
+                        />
+                        ))
+                    } 
+                </Row>
+            </Container>
+        </div>
     )
 }
 
