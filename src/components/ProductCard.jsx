@@ -4,7 +4,7 @@ import './stylesheets/image-card.css';
 import { handleDelete } from './DeleteProduct';
 
 
-const ProductCard = ({product}) => {
+const ProductCard = ({product, handleDelete}) => {
     
 
     return (
