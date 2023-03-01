@@ -9,15 +9,15 @@ console.log(product)
     return(
         <Modal show={show} onHide={handleClose} size="lg">
         <Modal.Header closeButton>
-          <Modal.Title>{product.title}</Modal.Title>
+          <Modal.Title>{product.price} - {product.title}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
                       <Card style={{ width: '90%' }}>
-                    <Card.Img variant="top" src="" />
+                    <Card.Img variant="top" src={product.image} />
                     <Card.Body>
-                      <Card.Title>Card Title</Card.Title>
+                      {/* <Card.Title>Card Title</Card.Title> */}
                       <Card.Text>
-                        DESCRIPTION
+                        {product.description}
                       </Card.Text>
                     </Card.Body>
                   </Card>
