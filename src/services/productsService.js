@@ -10,7 +10,13 @@ const URL = axios.create({
 })
 
 const ProductsService = {
-
+    async getData() {
+        const response = axios.get(URL); 
+        return response; 
+    },
+    async addProduct(newProduct){
+        await URL.post("/products", newProduct)
+    },
     async deleteProduct(id){
         await URL.delete("/products/" + id)
     },

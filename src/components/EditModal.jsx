@@ -1,15 +1,6 @@
-import {React, useState} from 'react'
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import {Container} from 'react-bootstrap';
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col';
-import axios from 'axios';
-import Swal from 'sweetalert2';
-import { useNavigate } from 'react-router-dom'; 
-import ProductsHandler from '../handler/productsHandler';
+import React from 'react'; 
 
-const EditProduct = () => {
+const handleOpen = () => {
     const navigate = useNavigate.apply()
 
     const URL = "http://localhost:3000/products" 
@@ -217,5 +208,5 @@ const EditProduct = () => {
     );
 }
 
-export default EditProduct
 
+export default handleOpen;

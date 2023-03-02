@@ -4,10 +4,11 @@ import {
     Routes, 
     Route
 } from "react-router-dom"; 
-import App from '../container/App'
+import App from '../pages/App'
 import NavBar from '../components/NavBar'
-import NewProduct from '../container/NewProduct'
-import EditProduct  from '../container/EditProduct';
+import NewProduct from '../pages/NewProduct'
+// import EditProduct  from '../pages/EditProduct';
+// import ProductsHandler from '../handler/productsHandler';
 
 const Router = () => {
     return (
@@ -16,9 +17,11 @@ const Router = () => {
         <Routes> 
             <Route path='/' element={<App/>} /> 
             <Route path='/new' element={<NewProduct/>} /> 
-            <Route path='/edit' element={<EditProduct/>} />
+            {/* <Route path='/edit' element={<EditProduct/>} /> */}
         </Routes>
         </BrowserRouter>
     )
 }
+
+
 export default Router; 

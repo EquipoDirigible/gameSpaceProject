@@ -4,7 +4,7 @@ import './stylesheets/image-card.css';
 
 
 const ProductCard = ({product, handleDelete, handleUpdate}) => {
-    
+
 
     return (
         <div className="col-3">
