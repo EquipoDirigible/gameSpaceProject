@@ -7,8 +7,9 @@ import Col from 'react-bootstrap/Col';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom'; 
+import ProductsHandler from '../handler/productsHandler';
 
-const NewProduct = () => {
+const EditProduct = () => {
     const navigate = useNavigate.apply()
 
     const URL = "http://localhost:3000/products" 
@@ -61,7 +62,7 @@ const NewProduct = () => {
     })
 
     const handleProductImageChange=((event) => {
-            const file = event.target.files[0];
+        const file = event.target.files[0];
             const reader = new FileReader();
             reader.readAsDataURL(file);
             reader.onload = () => {
@@ -70,7 +71,7 @@ const NewProduct = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-            let newProduct = {
+            let editProduct = {
                 productTitle, 
                 productDescription, 
                 productPrice, 
@@ -81,8 +82,9 @@ const NewProduct = () => {
                 productAge, 
                 productGenre, 
                 productImage};
+        ProductsHandler.editProduct(id, editedProduct);
                 
-        const response = await axios.post(URL, newProduct);
+        const response = await axios.put(URL, editProduct);
         if (response.status === 201) {
             Swal.fire({
                 icon: 'success',
@@ -104,12 +106,11 @@ const NewProduct = () => {
                 footer: 'Did you type every field in the form?'
             })
         }
-
     }
 
     return (
         <Container>
-            <h1 className="text-center"> Add Product </h1>
+            <h1 className="text-center"> Edit Product </h1>
                 <Form  onSubmit={handleSubmit}>
                 <Row className="mb-3">
                     <Form.Group as={Col} className="mb-3">
@@ -216,6 +217,5 @@ const NewProduct = () => {
     );
 }
 
-export default NewProduct
-
+export default EditProduct
 

@@ -11,6 +11,7 @@ const NavBar = () => {
             <Link to="/" className="navbar-brand"> Index </Link>
             <Nav className="me-auto">
                 <Link to="/new" className="nav-link"> New </Link> 
+                <Link to='/edit' className='nav-link'> Edit </Link>
             </Nav>
         </Container>
       </Navbar>
