@@ -14,40 +14,36 @@ const ProductCard = ({product}) => {
     const handleShow = () => setShow(true);
 
     return (
-        <>
-        <div className="col-3">
-            
-            <Card border="light" style={{ width: '18rem' }}> 
+    <>
+    <div className="col-3">
+            <MoreDetails show={show} handleClose={handleClose} product={product}/> 
+        <Card border="light" style={{ width: '18rem' }}> 
             <Card.Header className="text-center text-uppercase card-header"> 
-                        {product.price} - {product.title}
-                    </Card.Header>
+                {product.price} - {product.title}
+            </Card.Header>
                 <img src={product.image} alt={product.title} className="card-img-top image-card"/> 
-                <Card.Body> 
+            <Card.Body> 
 
-                    <div /*className="d-grid gap-2"*/ className="ButtonMethod"> 
-                        <Button className="Method" variant="secondary"><BsGearWide /></Button>  
-                        <Button className="Method" variant="secondary"> <BsFillXCircleFill /></Button> 
-                        <Button className="Method" variant="secondary"> <BsStarFill /> </Button> 
-                    </div>
-                    <MoreDetails show={show} handleClose={handleClose}/> 
-                    <ListGroup> 
-                        {/* <ListGroupItem> <strong> </strong> {product.description}</ListGroupItem> */}
-                        {/* <ListGroupItem> <stron> Difficulty: </stron> {product.difficulty}</ListGroupItem>
+                <div /*className="d-grid gap-2"*/ className="ButtonMethod"> 
+                    <Button className="Method" variant="secondary"><BsGearWide /></Button>  
+                    <Button className="Method" variant="secondary"> <BsFillXCircleFill /></Button> 
+                    <Button className="Method" variant="secondary"> <BsStarFill /> </Button>     
+                </div>
+                    
+                    {/* <ListGroup>   */}
+                         {/* <ListGroupItem> <strong> </strong> {product.description}</ListGroupItem> 
+                         <ListGroupItem> <stron> Difficulty: </stron> {product.difficulty}</ListGroupItem>
                         <ListGroupItem> <stron>Price 🇪🇺: </stron> {product.price}</ListGroupItem>
                         <ListGroupItem> <stron> Game time in minutes: </stron> {product.duration}</ListGroupItem>
-                        <ListGroupItem> <stron> Max number of players: </stron> {product.players}</ListGroupItem> 
+                        <ListGroupItem> <stron> Max number of players: </stron> {product.players}</ListGroupItem>  */}
+                    {/* </ListGroup>  */}
+                              
+            <Card.Footer className="text-muted, text-center">Last update: 1 month ago </Card.Footer>
+            <Button variant="secondary" onClick={handleShow}>More details </Button> 
+            </Card.Body>
+        </Card>
+    </div>
+    </> )}
 
-                             <Button variant="secondary" onClick={handleShow}>More details </Button> 
-
-
-                             <Card.Footer className="text-muted, text-center">Last update: 1 month ago</Card.Footer> 
-                    </ListGroup> */}
-                </Card.Body>
-            </Card>
-            <MoreDetails show={show} handleClose={handleClose} product={product}/> 
-        </div>
-         </> 
-    )
-}
 
 export default ProductCard ;
