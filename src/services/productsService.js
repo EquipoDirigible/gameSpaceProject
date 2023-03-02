@@ -10,8 +10,12 @@ const URL = axios.create({
 })
 
 const ProductsService = {
+
+    async deleteProduct(id){
+        await URL.delete("/products/" + id)
+    },
     async editProduct(id, editedProduct){
-        await apiClient.patch("/products/" + id, editedProduct)
+        await URL.patch("/products/" + id, editedProduct)
     }
 }
 
