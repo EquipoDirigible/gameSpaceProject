@@ -3,7 +3,7 @@ import axios from 'axios';
 import ProductCard from '../components/ProductCard';
 import {Container, Row}  from 'react-bootstrap';
 import Swal from 'sweetalert2';
-import Swal from 'sweetalert2';
+
 
 const ListProducts = () => {
 

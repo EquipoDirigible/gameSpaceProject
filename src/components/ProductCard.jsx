@@ -1,7 +1,6 @@
-import React, { useEffect , useState} from 'react';
 import {Card , ListGroup, ListGroupItem, Button} from 'react-bootstrap';
 import './stylesheets/image-card.css';  
-import { handleDelete } from './DeleteProduct';
+
 
 
 const ProductCard = ({product, handleDelete}) => {
