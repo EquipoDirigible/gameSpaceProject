@@ -15,9 +15,9 @@ const ProductCard = ({product}) => {
 
     return (
     <>
-    <div className="col-3">
+    <div className="col">
             <MoreDetails show={show} handleClose={handleClose} product={product}/> 
-        <Card border="light" style={{ width: '18rem' }}> 
+        <Card border="light" style={{ width: '17.rem'}}> 
             <Card.Header className="text-center text-uppercase card-header"> 
                 {product.price} - {product.title}
             </Card.Header>
