@@ -11,20 +11,20 @@ console.log(product)
     return(
         <Modal show={show} onHide={handleClose} size="lg">
         <Modal.Header closeButton>
-        <Modal.Title> {product.price} - {product.title}</Modal.Title>
+        <Modal.Title> {product.price} - {product.title}  </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-                  <Card style={{ width: '90%' }} border="light">
+                  <Card className="text-center" style={{ width: '90%'}} border="light">
                         <Card.Img variant="top" src={product.image} />
                         <Card.Body>
-                          {/* <Card.Title>Card Title</Card.Title> */}
                           <Card.Text>
-                            {product.description}
+                           <p>  {product.description}  </p>
+                           <p> Difficulty level: {product.difficulty} </p>
+                           <p> Average game-time: {product.duration} </p> 
+                           <p> Maximum number of players: {product.players} </p> 
                           </Card.Text>
                         </Card.Body>
                   </Card>
-        </Modal.Body>
-        <Modal.Body> Hi! I'am a message
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
