@@ -5,11 +5,12 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import './NavScrollExample.css'
+import './stylesheets/NewNavbar.css'
+import { Link } from 'react-router-dom';
 
-function NavScrollExample() {
+function NewNavbar() {
   return (
-    <Navbar className='navbarcolor' expand="lg">
+    <Navbar className='navbarcolor' expand="lg" fixed="top" >
       <Container fluid>
         <Navbar.Brand href="#">Game-Space</Navbar.Brand>
         <img src="src\assets\logo-navbar.png" className='LogoGameSpaceNavbar'/>
@@ -20,17 +21,9 @@ function NavScrollExample() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
+             <Link to="/" className="navbar-brand">Home</Link>
+             <Link to="/new" className="nav-link"> New </Link> 
             
-            <Nav.Link href="#action1">Your Products</Nav.Link>
-            <Nav.Link href="#action2">Mail</Nav.Link>
-            <Nav.Link href="#action2">Favorites</Nav.Link>
-            <Nav.Link href="#action2">Sold</Nav.Link>
-            <Nav.Link href="#action2">Stadistics</Nav.Link>
-            <Nav.Link href="#action2">Wallet</Nav.Link>
-            <Nav.Link href="#action2">Configuration</Nav.Link>
-            <Nav.Link href="#" disabled>
-              Link
-            </Nav.Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control
@@ -47,4 +40,4 @@ function NavScrollExample() {
   );
 }
 
-export default NavScrollExample;
+export default NewNavbar;
