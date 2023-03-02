@@ -7,13 +7,14 @@ import ListProducts from '../components/ListProducts'
 
 const App = () => {
   return (
-    
-    <Container fluid> 
+    <>
+    <div> 
       <h1 className="text-center"> List of products  </h1>
       <ListProducts/>
       <Footer/>
-    </Container>
+    </div>
     
+    </>
   )
 }
 export default App;
