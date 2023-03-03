@@ -8,10 +8,11 @@ import { BsStarFill } from 'react-icons/bs';
 // import {Link} from "react-router-dom";
 
 
-const ProductCard = ({product}) => {
+const ProductCard = ({product, handleDelete, handleUpdate}) => {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
 
     return (
     <>
@@ -25,8 +26,8 @@ const ProductCard = ({product}) => {
             <Card.Body> 
 
                 <div /*className="d-grid gap-2"*/ className="ButtonMethod"> 
-                    <Button className="Method" variant="secondary"><BsGearWide /></Button>  
-                    <Button className="Method" variant="secondary"> <BsFillXCircleFill /></Button> 
+                    <Button className="Method" variant="secondary" onClick={() => handleUpdate(product)}><BsGearWide /></Button>  
+                    <Button className="Method" variant="secondary" onClick={() => handleDelete(product.id)}> <BsFillXCircleFill /></Button> 
                     <Button className="Method" variant="secondary"> <BsStarFill /> </Button>     
                 </div>
                     

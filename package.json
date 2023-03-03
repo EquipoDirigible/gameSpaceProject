@@ -24,7 +24,8 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
     "react-router": "^6.8.1",
-    "react-router-dom": "^6.8.1"
+    "react-router-dom": "^6.8.1",
+    "sweetalert2": "^11.7.3"
   },
   "devDependencies": {
     "@testing-library/react": "^14.0.0",

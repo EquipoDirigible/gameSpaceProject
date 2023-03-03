@@ -1,7 +1,6 @@
 import React from 'react'
 import './App.css'
-import Footer from '../components/Footer'
-import { Container  } from 'react-bootstrap'                                                                                    
+import Footer from '../components/Footer'                                                                                   
 import '../components/stylesheets/reset.css'
                                                                                   
 import ListProducts from '../components/ListProducts'
