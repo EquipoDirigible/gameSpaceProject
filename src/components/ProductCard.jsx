@@ -15,7 +15,7 @@ const ProductCard = ({product, handleDelete, handleUpdate}) => {
                 <img src={product.image} alt={product.title} className="card-img-top image-card"/> 
                 <Card.Body> 
                     <div className="d-grid gap-2"> 
-                        <Button variant="secondary" onClick={() => handleUpdate(product.id)}> Edit </Button>  
+                        <Button variant="secondary" onClick={() => handleUpdate(product)}> Edit </Button>  
                         <Button variant="secondary" onClick={() => handleDelete(product.id)}> Delete </Button> 
                         <Button variant="secondary"> Favorite </Button> 
                     </div>

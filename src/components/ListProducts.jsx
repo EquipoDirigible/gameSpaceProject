@@ -15,6 +15,8 @@ const ListProducts = () => {
             const [showModal, setShowModal] = useState(false);
             const handleClose = () => setShowModal(false);
             const handleOpen = () => setShowModal(true);
+            const [editedProduct, setEditedProduct] = useState([]);
+         
 
             // Form-related 
        
@@ -29,36 +31,41 @@ const ListProducts = () => {
             const [genre, setGenre] = useState();
             const [image, setImage] = useState();
 
-            const handleProductTitleUpdate = ({event}) => {
+            const handleProductTitleUpdate = (event) => {
                 setTitle(event.target.value)
             }
-            const handleProductDescriptionUpdate = ({event}) => {
+            const handleProductDescriptionUpdate = (event) => {
                 setDescription(event.target.value)
             }
-            const handleProductPriceUpdate = ({event}) => {
+            const handleProductPriceUpdate = (event) => {
                 setPrice(event.target.value)
             }
-            const handleProductDifficultyUpdate = ({event}) => {
+            const handleProductDifficultyUpdate = (event) => {
                 setDifficulty(event.target.value)
             }
-            const handleProductPlayersUpdate = ({event}) => {
+            const handleProductPlayersUpdate = (event) => {
                 setPlayers(event.target.value)
             }
-            const handleProductDurationUpdate = ({event}) => {
+            const handleProductDurationUpdate = (event) => {
                 setDuration(event.target.value)
             }
-            const handleProductPublisherUpdate = ({event}) => {
+            const handleProductPublisherUpdate = (event) => {
                 setPublisher(event.target.value)
             }
-            const handleProductAgeUpdate = ({event}) => {
+            const handleProductAgeUpdate = (event) => {
                 setAge(event.target.value)
             }
-            const handleProductGenreUpdate = ({event}) => {
+            const handleProductGenreUpdate = (event) => {
                 setGenre(event.target.value)
             }
-            const handleProductImageUpdate = ({event}) => {
-                setImage(event.target.value)
-            }
+            const handleProductImageUpdate = (event) => {
+                const file = event.target.files[0];
+                const reader = new FileReader();
+                reader.readAsDataURL(file);
+                reader.onload = () => {
+                    setImage(reader.result);
+                };
+            };
 
    
 
@@ -103,11 +110,53 @@ const ListProducts = () => {
                             }})
                         }})
                     }
-    const handleUpdate = (product) => {
+    const handleUpdate = async (editedProduct) => {
+        // console.log(editedProduct)
     handleOpen(); 
-    // setList(product);
+        // console.log(id)
+        if(!editedProduct) {
+            return;
+        }
+        setEditedProduct(editedProduct)
+
+        // console.log(editedProductForm)
+
     }
-    
+    const handleSubmit = async () => {
+        let editedProductForm = {
+        
+            "title" : title,
+            "description" : description, 
+            "price": price, 
+            "difficulty": difficulty,
+            "players": players,
+            "duration": duration,
+            "publihser": publisher,
+            "age": age,
+            "genre": genre,
+            "image": image
+        }
+        // console.log(id)
+        await axios.patch(`http://localhost:3000/products/${editedProduct.id}`, editedProductForm)
+
+            .then((response) => {
+                if(response.status === 200) { 
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Product edited',
+                        showConfirmButton: true,
+                        showClass: {
+                            popup: 'animate__animated animate__fadeInDown'
+                        },
+                        hideClass: {
+                            popup: 'animate__animated animate__fadeOutUp'
+                        }
+                            }) 
+                }
+                // setList()
+            })
+
+        }
     // UseState para grabar la información como estado, cada vez que cambie vuelve a renderizarse
 
     useEffect(() => {
@@ -128,9 +177,7 @@ const ListProducts = () => {
                         product ={product}
                         handleDelete={handleDelete}
                         handleUpdate={handleUpdate}
-                        // handleClose={handleClose}
                         handleOpen={handleOpen}
-                        // setDataModal={setDataModal}
                     />
                 ))
             } 
@@ -146,24 +193,22 @@ const ListProducts = () => {
                     <Modal.Title>Edit product</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>Woohoo, you're reading this text in a modal!
-                <Form>
+                <Form onSubmit={handleSubmit}>
                 <Row className="mb-3">
                     <Form.Group as={Col} className="mb-3">
                         <Form.Label> Product Name </Form.Label>
                         <Form.Control
                         type="text"
-                        placeholder="Enter product name"
                         name="title"
-                        value={title}
+                        placeholder={editedProduct.title}
                         onChange={handleProductTitleUpdate}/>
                     </Form.Group>
                     <Form.Group as={Col} className="mb-3">
                         <Form.Label>Product Description </Form.Label>
                         <Form.Control
                         type="text"
-                        placeholder="Enter product description"
                         name="description"
-                        value={description}
+                        placeholder={editedProduct.description}
                         onChange={handleProductDescriptionUpdate}/>
                     </Form.Group>
                 </Row>
@@ -172,9 +217,8 @@ const ListProducts = () => {
                         <Form.Label> Product Price </Form.Label>
                         <Form.Control
                         type="number"
-                        placeholder="Enter product price"
                         name="price"
-                        value={price}
+                        placeholder={editedProduct.price}
                         onChange={handleProductPriceUpdate}/>
                     </Form.Group>
                     <Form.Group as={Col} className="mb-3">
@@ -191,18 +235,16 @@ const ListProducts = () => {
                         <Form.Label> Product Number of Players </Form.Label>
                         <Form.Control
                         type="number"
-                        placeholder="Enter product max number of players"
                         name="players"
-                        value={players}
+                        placeholder={editedProduct.players}
                         onChange={handleProductPlayersUpdate}/>
                     </Form.Group>
                     <Form.Group as={Col} className="mb-3">
                         <Form.Label> Game Duration </Form.Label>
                         <Form.Control
                         type="number"
-                        placeholder="Enter average game duration"
                         name="duration"
-                        value={duration}
+                        placeholder={editedProduct.duration}
                         onChange={handleProductDurationUpdate}/>
                     </Form.Group>
                 </Row>
@@ -211,27 +253,24 @@ const ListProducts = () => {
                         <Form.Label> Product Publisher </Form.Label>
                         <Form.Control
                         type="text"
-                        placeholder="Product Publisher"
                         name="publisher"
-                        value={publisher}
+                        placeholder={editedProduct.publisher}
                         onChange={handleProductPublisherUpdate}/>
                     </Form.Group>
                     <Form.Group as={Col} className="mb-3">
                         <Form.Label> Recommended age </Form.Label>
                         <Form.Control
                         type="number"
-                        placeholder="Product recommended age"
                         name="age"
-                        value={age}
+                        placeholder={editedProduct.age}
                         onChange={handleProductAgeUpdate}/>
                     </Form.Group>
                     <Form.Group as={Col} className="mb-3">
                         <Form.Label> Product Genre </Form.Label>
                         <Form.Control
                         type="text"
-                        placeholder="Product main genre"
                         name="genre"
-                        value={genre}
+                        placeholder={editedProduct.genre}
                         onChange={handleProductGenreUpdate}/>
                     </Form.Group>
                 </Row>
@@ -239,16 +278,16 @@ const ListProducts = () => {
                         <Form.Label> Product Image </Form.Label>
                         <Form.Control
                         type="file"
-                        placeholder="Attach product image"
                         name="image"
-                        value={image}
+                        placeholder={editedProduct.image}
                         onChange={handleProductImageUpdate}/>
                     </Form.Group> 
-                    </Form> 
-                </Modal.Body>
-                <Button variant="primary" type="submit">
+                    <Button variant="primary" type="submit">
                             Save Changes
                         </Button>
+                    </Form> 
+                </Modal.Body>
+                
                 <Modal.Footer>
                     {/* <Button variant="secondary" type="reset" onClick={handleClose}>
                         Close

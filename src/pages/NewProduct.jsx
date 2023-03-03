@@ -22,7 +22,7 @@ const NewProduct = () => {
     const [productPublisher, setProductPublisher] = useState("")
     const [productAge, setProductAge] = useState(null)
     const [productGenre, setProductGenre] = useState("")
-    const [productImage, setProductImage] = useState("")
+    const [productImage, setProductImage] = useState(null)
 
     const handleProductTitleChange=((event) => {
         setProductTitle(event.target.value)
@@ -60,28 +60,32 @@ const NewProduct = () => {
         setProductGenre(event.target.value)
     })
 
-    const handleProductImageChange=((event) => {
-            const file = event.target.files[0];
-            const reader = new FileReader();
-            reader.readAsDataURL(file);
-            reader.onload = () => {
-            setProductImage(reader.result)};
-    })
+    const handleProductImageChange = (event) => {
+        const file = event.target.files[0];
+        console.log(file)
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = () => {
+            setProductImage(reader.result);
+        };
+    };
 
     const handleSubmit = async (event) => {
+        // event.preventDefault();
+        // productsHandler.addProduct(newProduct);
         event.preventDefault();
             let newProduct = {
-                productTitle, 
-                productDescription, 
-                productPrice, 
-                productDifficulty, 
-                productPlayers, 
-                productDuration, 
-                productPublisher, 
-                productAge, 
-                productGenre, 
-                productImage};
-                
+                "title": productTitle, 
+                "description": productDescription, 
+                "price": productPrice, 
+                "difficulty": productDifficulty, 
+                "players": productPlayers, 
+                "duration": productDuration, 
+                "publisher": productPublisher, 
+                "age": productAge, 
+                "genre": productGenre, 
+                "image": productImage};
+            console.log(newProduct)
         const response = await axios.post(URL, newProduct);
         if (response.status === 201) {
             Swal.fire({
@@ -205,7 +209,6 @@ const NewProduct = () => {
                         type="file"
                         placeholder="Attach product image"
                         name="image"
-                        value={productImage}
                         onChange={handleProductImageChange}/>
                     </Form.Group>
                     <Button variant="outline-success" type="submit">

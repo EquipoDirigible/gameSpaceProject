@@ -5,7 +5,7 @@ const ProductsHandler = {
     getData(){
         return ProductsService.getData();
     },
-    newProduct(newProduct) {
+    addProduct(newProduct) {
             if (!newProduct) {
                 return;
             }
@@ -18,9 +18,9 @@ const ProductsHandler = {
             "players": newProduct.players,
             "duration": newProduct.duration,
             "publisher": newProduct.publisher,
-            "age": new Date(),
+            "age": newProduct.age,
             "genre": newProduct.genre,
-            "image": newImage.img
+            "image": newProduct.image
             }
             ProductsService.addProduct(product);
             return newProduct;
@@ -41,12 +41,12 @@ const ProductsHandler = {
             "players": editedProduct.players,
             "duration": editedProduct.duration,
             "publisher": editedProduct.publisher,
-            "age": new Date(),
+            "age": editedProduct.age,
             "genre": editedProduct.genre,
-            "image": editedImage.img
+            "image": editedProduct.image
         }
 
-        return ProductsService.editProduct(id, editedProductForm);
+        return ProductsService.editProduct(id, editProductForm);
     }
 } 
 
