@@ -7,6 +7,10 @@ import Col from 'react-bootstrap/Col';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom'; 
+import "../components/stylesheets/NewProduct.css";
+import NewNavbar from '../components/NewNavBar';
+import Footer from '../components/Footer';
+
 
 const NewProduct = () => {
     const navigate = useNavigate.apply()
@@ -108,15 +112,17 @@ const NewProduct = () => {
                 footer: 'Did you type every field in the form?'
             })
         }
-
     }
 
     return (
-        <Container>
+        <>
+        <NewNavbar/>
+        <div className="Page col-md">
+        <Container id="FormContainer">
             <h1 className="text-center"> Add Product </h1>
                 <Form  onSubmit={handleSubmit}>
-                <Row className="mb-3">
-                    <Form.Group as={Col} className="mb-3">
+                <Row className="Add-Product">
+                    <Form.Group as={Col} className="Product-Name">
                         <Form.Label> Product Name </Form.Label>
                         <Form.Control
                         type="text"
@@ -125,7 +131,7 @@ const NewProduct = () => {
                         value={productTitle}
                         onChange={handleProductTitleChange}/>
                     </Form.Group>
-                    <Form.Group as={Col} className="mb-3">
+                    <Form.Group as={Col} className="Product-Description">
                         <Form.Label>Product Description </Form.Label>
                         <Form.Control
                         type="text"
@@ -136,7 +142,7 @@ const NewProduct = () => {
                     </Form.Group>
                 </Row>
                 <Row className="mb-3">
-                    <Form.Group as={Col} className="mb-3">
+                    <Form.Group as={Col} className="Product-Price">
                         <Form.Label> Product Price </Form.Label>
                         <Form.Control
                         type="number"
@@ -145,7 +151,7 @@ const NewProduct = () => {
                         value={productPrice}
                         onChange={handleProductPriceChange}/>
                     </Form.Group>
-                    <Form.Group as={Col} className="mb-3">
+                    <Form.Group as={Col} className="Difficulty-Level">
                         <Form.Label> Select Product Difficulty Level </Form.Label>
                         <Form.Select
                         name="difficulty"
@@ -155,7 +161,7 @@ const NewProduct = () => {
                             <option value="Hard">Hard</option>
                         </Form.Select>
                     </Form.Group>
-                    <Form.Group as={Col} className="mb-3">
+                    <Form.Group as={Col} className="Number-Players">
                         <Form.Label> Product Number of Players </Form.Label>
                         <Form.Control
                         type="number"
@@ -164,7 +170,7 @@ const NewProduct = () => {
                         value={productPlayers}
                         onChange={handleProductPlayersChange}/>
                     </Form.Group>
-                    <Form.Group as={Col} className="mb-3">
+                    <Form.Group as={Col} className="Game-Duration">
                         <Form.Label> Game Duration </Form.Label>
                         <Form.Control
                         type="number"
@@ -174,7 +180,7 @@ const NewProduct = () => {
                         onChange={handleProductDurationChange}/>
                     </Form.Group>
                 </Row>
-                <Row className="mb-3">
+                <Row className="Product-Publisher">
                     <Form.Group as={Col} className="mb-3">
                         <Form.Label> Product Publisher </Form.Label>
                         <Form.Control
@@ -184,7 +190,7 @@ const NewProduct = () => {
                         value={productPublisher}
                         onChange={handleProductPublisherChange}/>
                     </Form.Group>
-                    <Form.Group as={Col} className="mb-3">
+                    <Form.Group as={Col} className="Recommended-Age">
                         <Form.Label> Recommended age </Form.Label>
                         <Form.Control
                         type="number"
@@ -193,7 +199,7 @@ const NewProduct = () => {
                         value={productAge}
                         onChange={handleProductAgeChange}/>
                     </Form.Group>
-                    <Form.Group as={Col} className="mb-3">
+                    <Form.Group as={Col} className="Main-Genre">
                         <Form.Label> Product Genre </Form.Label>
                         <Form.Control
                         type="text"
@@ -203,7 +209,7 @@ const NewProduct = () => {
                         onChange={handleProductGenreChange}/>
                     </Form.Group>
                 </Row>
-                    <Form.Group className="mb-3">
+                    <Form.Group className="Product-Image">
                         <Form.Label> Product Image </Form.Label>
                         <Form.Control
                         type="file"
@@ -211,11 +217,14 @@ const NewProduct = () => {
                         name="image"
                         onChange={handleProductImageChange}/>
                     </Form.Group>
-                    <Button variant="outline-success" type="submit">
+                    <Button  id ="NewProductButton" type="submit">
                         Submit
                     </Button>
                 </Form>
         </Container>
+        </div>
+        <Footer/>
+        </>
     );
 }
 
