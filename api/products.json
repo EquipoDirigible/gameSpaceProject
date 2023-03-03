@@ -1,44 +1,145 @@
 {
-  "products": [
-      {
-          "id": 1,
-          "title": "Root",
-          "description": "Decide the fate of the forest as woodland factions fight for contrasting goals.",
-          "price": "20€",
-          "difficulty": "Normal",
-          "duration": 60,
-          "players": 4,
-          "image": "https://cf.geekdo-images.com/JUAUWaVUzeBgzirhZNmHHw__itemrep/img/sQgkl-_hydBVvQHAMLt2Zk_3dwI=/fit-in/246x300/filters:strip_icc()/pic4254509.jpg"
-      },
-      {
-          "id": 2,
-          "title": "Iki",
-          "description": "Hire artisans, set them up in the market and acquire prestige in feudal Japan.",
-          "price": "30€",
-          "difficulty": "Easy",
-          "duration": 90,
-          "players": 4,
-          "image": "https://cf.geekdo-images.com/ypE6HrTY1Xvpt1XCpKlMBw__itemrep/img/78YkxWh0kuforNDF-2wTJTlKaZY=/fit-in/246x300/filters:strip_icc()/pic5960068.png"
-      },
-      {
-          "id": 3,
-          "title": "Sail",
-          "description": "Navigate your pirate ship together through turbulent waters and avoid the Kraken!",
-          "price": "15€",
-          "difficulty": "Easy",
-          "duration": 20,
-          "players": 2,
-          "image": "https://cf.geekdo-images.com/WdYRHQ_ILHTV_ECMGF27Gw__itemrep/img/1c7zshiWMvra-pEdBUnD0Lf0BPE=/fit-in/246x300/filters:strip_icc()/pic7267575.jpg"
-      },
-      {
-          "id": 4,
-          "title": "Dune Imperium",
-          "description": "Influence, intrigue, and combat in the universe of Dune.",
-          "price": "40€",
-          "difficulty": "Normal",
-          "duration": 120,
-          "players": 4,
-          "image": "https://cf.geekdo-images.com/PhjygpWSo-0labGrPBMyyg__itemrep/img/3_xJ0tO5L62bUp2oRfjeVS0DHX0=/fit-in/246x300/filters:strip_icc()/pic5666597.jpg"
-      }
-  ]
+    "products": [
+        {
+            "id": 1,
+            "title": "Secret Hitler",
+            "publisher":"Goat Wolf & Cabbage",
+            "genre": "rol",
+            "players": 10,
+            "age": 13,
+            "duration": 45,
+            "difficulty": "Easy",  
+            "description": "Secret Hitler is a dramatic game of political intrigue and betrayal set in 1930's Germany. Players are secretly divided into two teams-liberals and fascists: Known only to each other, the facistis coordinate to sow destrust and install their cold-blooded leader. The liberals must find and stop the Secret Hitler before it is too late",
+            "price": 40,
+            "image": ""
+            
+        },
+
+        {
+            "id": 2,
+            "title": "Potion Explosion",
+            "publisher":"Edge Entretainment",
+            "genre": "strategic",
+            "players":4,
+            "age": 8,
+            "duration":30,
+            "difficulty":"Easy",
+            "description": "Dear students, it's time for the final exams of the Potions class! The rules are always the same: Take an ingredient marble from the dispenser and watch the others fall. If you connect marbles of de same color, they explode and you can take them, too! Complete your potions using the marbles you collect, and drink them to unleash thier magical power. Remenber, though that to win the Student of de Year award, being quick won't be enough: you'll also need to brew the valuable potions in Potion Explosion!",            
+            "price": 59,
+            "imagen":""
+        },
+
+        {
+            "id": 3,
+            "title": "Pixie Queen",
+            "publisher":"Game Brewer",
+            "genre": "strategic",
+            "players": 5,
+            "age": 12,
+            "duration": 120,
+            "difficulty":"Normal",
+            "description": "Pixie Queen is a smothly playing worker-placement game about a pixie queen who rules over her subordinates like a true tyrant. The legand tells of pixies being small, flying, naughty creatures often spotted in the area of Cronwall and Devon in the UK. Apart from the steling, bulling and torturing, they are considered a big nuisance to the human inhabitants of the region. Accordin to the game, they are obliged to do so by their pixie queen...",
+            "price": 45,
+            "imagen": ""
+        },
+
+        {
+            "id": 4,
+            "title": "Zombicide: 2nd Edition ",
+            "publisher":"CMON",
+            "genre": "strategic",
+            "players": 1,
+            "age": 14,
+            "duration": 60,
+            "difficulty":"Easy",
+            "description": "Zombicide, the board game, has taken the world by storm with over two million copies sold since its release in 2012 and spawning a cult franchise of cooperative zombie slaying all over the world. In Zombicide, are controlled by the game, while players take on the role of survivors who must co-operate in order to survive and thrive in a world overrun by the bloodthirsty undead. Find guns and gear to take the fight to the zombies through 25 different scenarios linked by a branching story as you pick your way through an infested city",
+            "price": 123,
+            "imagen":""
+        },
+
+        {
+            "id": 5,
+            "title": "Root",
+            "publisher":"Leder Games",
+            "genre": "asymmetric",
+            "players": 4,
+            "age": 10,
+            "duration": 90,
+            "description": "Root is a game of woodland might and right. Stalk the woods as one of the Vagabonds, seize the initiative with the Eyrie birds of prey, rule over your subjects as the Marquise de Cat, or command the Woodland Alliance to create a new order. With creatures and cunning, you'll rule a fantastic forest kindom in the ultimate asymmetric board game of adventure and war",
+            "difficulty":"Normal",
+            "price": 60,
+            "imagen":""
+        },
+
+        {
+            "id": 6,
+            "title": "Eclipse: Second Dawn for the Galaxy",
+            "publisher":"Lautapelit fi",
+            "genre": "strategy",
+            "players": 2,
+            "age": 14,
+            "duration": 150,
+            "description": "Eclipse places you in control of a vast interstellar civilization. Explore new star systems, research technologies, and build spaceships with which to wage war. There are many potential paths to victory, so you need to plan your strategy according of the strengths and weaknesses of you species, while paying attention to the other civizations endeavors",
+            "difficulty":"High",
+            "price": 120,
+            "imagen":""
+        },
+
+        {
+            "id": 7,
+            "title": "Munchkin",
+            "publisher":"Edge Entretainment",
+            "genre": "rol",
+            "players": 6,
+            "age": 12,
+            "duration": 60,
+            "description": "Munchkin is a card game un which the player starts as a level 1 human with no class and his goal is to reach level 10 before the help of weapons, overcome curses that could greatly annoy and wisely use the equipment found in the dungeons",
+            "difficulty":"Normal",
+            "price": 25,
+            "imagen":""
+        },
+
+        {
+            "id": 8,
+            "title": "Mysterium",
+            "publisher":"Asmodee",
+            "genre": "rol",
+            "players": 7,
+            "age": 10,
+            "duration": 45,
+            "description": "Can you guide a group of mediums to help solve the mystery of your death in Mysterium? Easy enough, but you're only allowed to communicate to your friends using cryptic vision cards, and all you can do is watch as your friends struggle in confusion",
+            "difficulty":"Easy",
+            "price": 39,
+            "imagen":""
+        },
+        
+        {
+            "id": 9,
+            "title": "Catan",
+            "publisher":"Kosmos",
+            "genre": "Strategy",
+            "players": 4,
+            "age": 10,
+            "duration": 100,
+            "description": "Picture yourself in the era of discoveries: after a long voyage of great deprivation, your ships have finally reached the coast of an uncharted island. Its name shall be Catan! But you are not the only discoverer. Other fearless seafarers have also landed on the shores of Catan - the race to settle the island has begun!   ",
+            "difficulty":"Easy",
+            "price": 40,
+            "imagen":""
+        },
+
+        {
+            "id": 10,
+            "title": "Agricola",
+            "publisher":"Asmodee",
+            "genre": "strategy",
+            "players": 4,
+            "age": 12,
+            "duration": 60,
+            "description": "Agricola is one of the most talked about board games in recent years. In Agricola we will have to run a farm doing all kinds of activities: building, barns, tilling, sowing, raising animals, improving our house and having our own family. Become the best farmer with Agricola! ",
+            "difficulty":"Normal",
+            "price": 40,
+            "imagen":""
+        }
+
+    ]
 }
