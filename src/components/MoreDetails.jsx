@@ -22,8 +22,8 @@ console.log(product)
                           <Card.Text>
                            <p>  {product.description}  </p>
                            <Table striped bordered hover>
-                              <thead>
-                              <tr>
+                              <tbody>
+                                <tr>
                                   <td><strong>Editorial</strong></td>
                                   <td>EDITORIAL CALL HERE</td>
                                 </tr>
@@ -31,8 +31,8 @@ console.log(product)
                                   <th><strong>Difficulty</strong></th>
                                   <th>{product.difficulty}</th>
                                 </tr>
-                              </thead>
-                              <tbody>
+                              
+                              
                                 <tr>
                                   <td><strong>Average game-time</strong></td>
                                   <td>{product.duration} min</td>

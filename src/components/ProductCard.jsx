@@ -15,7 +15,7 @@ const ProductCard = ({product}) => {
 
     return (
     <>
-    <div className="col">
+    <div className="col-md-4">
             <MoreDetails show={show} handleClose={handleClose} product={product}/> 
         <Card border="light" style={{ width: '17.rem'}}> 
             <Card.Header className="text-center text-uppercase card-header"> 
