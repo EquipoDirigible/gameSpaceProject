@@ -19,8 +19,7 @@ function NewNavbar() {
           <Nav
             className="me-auto my-2 my-lg-0"
             style={{ maxHeight: '100px' }}
-            navbarScroll
-          >
+            navbarScroll>
              <Link to="/" className="navbar-brand">Home</Link>
              <Link to="/new" className="nav-link"> New </Link> 
             

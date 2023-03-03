@@ -4,8 +4,8 @@ import {
     Routes, 
     Route
 } from "react-router-dom"; 
-import App from '../container/App'
-import NewProduct from '../container/NewProduct'
+import App from '../pages/App'
+import NewProduct from '../pages/NewProduct'
 
 
 const Router = () => {
@@ -14,8 +14,11 @@ const Router = () => {
         <Routes> 
             <Route path='/' element={<App/>} /> 
             <Route path='/new' element={<NewProduct/>} /> 
+            {/* <Route path='/edit' element={<EditProduct/>} /> */}
         </Routes>
         </BrowserRouter>
     )
 }
+
+
 export default Router; 
