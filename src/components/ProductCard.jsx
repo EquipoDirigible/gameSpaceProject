@@ -5,7 +5,7 @@ import './stylesheets/image-card.css';
 
 const ProductCard = ({product}) => {
     return (
-        <div className="col-3">
+        <div className="col">
             <Card border="light" style={{ width: '18rem' }}> 
             <Card.Header className="text-center text-uppercase card-header"> 
                         {product.price} - {product.title}
