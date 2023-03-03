@@ -17,10 +17,10 @@ const ProductCard = ({product}) => {
     <>
     <div className="col-md-4">
             <MoreDetails show={show} handleClose={handleClose} product={product}/> 
-        <Card border="light" style={{ width: '17.rem'}}> 
-            <Card.Header className="text-center text-uppercase card-header"> 
+        <Card id="CardBackground" style={{ width: '17.rem'}}> 
+            <div id="CardHeader"><Card.Header className="text-center text-uppercase card-header"> 
                 {product.price} - {product.title}
-            </Card.Header>
+            </Card.Header></div>
                 <img src={product.image} alt={product.title} className="card-img-top image-card"/> 
             <Card.Body> 
 
@@ -38,7 +38,7 @@ const ProductCard = ({product}) => {
                         <ListGroupItem> <stron> Max number of players: </stron> {product.players}</ListGroupItem>  */}
                     {/* </ListGroup>  */}
                               
-            <Card.Footer className="text-muted, text-center">Last update: 1 month ago </Card.Footer>
+            <div id="CardFooter"><Card.Footer className="text-muted, text-center">Last update: 1 month ago </Card.Footer></div>
             <Button variant="secondary" onClick={handleShow}>More details </Button> 
             </Card.Body>
         </Card>
