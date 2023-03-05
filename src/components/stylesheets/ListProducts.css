@@ -1,0 +1,25 @@
+
+#SearchButton{
+    margin: 4%;
+    padding: 2%;
+    color: rgb(227,223,253);
+    background-color:rgb(72,149,239);
+    border-color: rgb(227,223,253);
+}
+
+#SearchButton:hover{
+    background-color:rgb(181,23,158);
+    border-color:rgb(227,223,253);
+}
+
+@media (max-width: 1000px)   {
+    #SearchButton{
+        margin: 4%;
+        margin-top: 12%;
+        padding: 2%;
+        color: rgb(227,223,253);
+        background-color:rgb(72,149,239);
+        border-color: rgb(227,223,253);
+    }
+}
+

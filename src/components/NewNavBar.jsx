@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -8,7 +8,11 @@ import './stylesheets/NewNavbar.css'
 import { Link } from 'react-router-dom';
 import { BsList } from 'react-icons/bs';
 
-function NewNavbar() {
+
+
+
+function NewNavbar({handleSearch}) {
+  
   return (
     <Navbar className='navbarContainer' expand="lg" fixed="top" >
       <Container fluid>
@@ -31,7 +35,8 @@ function NewNavbar() {
               className="me-2"
               aria-label="Search"
             />
-            <Button variant="outline-success">Search</Button>
+            <Button variant="outline-success" onChange={handleSearch}>Search</Button>
+                
           </Form>
         </Navbar.Collapse>
       </Container>
