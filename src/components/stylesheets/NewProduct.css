@@ -1,0 +1,177 @@
+.Page{
+    background-image: url(src/assets/bg.jpg);
+    height: auto; 
+    padding-bottom: 10%;
+    padding-top: 10%;
+}
+
+#FormContainer{
+    background-color:rgba(73, 75, 92, 0.429);
+    padding-right: 1%;
+    padding-left: 1%;
+    padding-bottom: 1%;
+    border-radius: 5%;
+}
+.form-label{
+    color:rgb(227,223,253);
+}
+
+h1{
+    font-weight: bold;
+    color:rgb(227,223,253);
+}
+.Product-Name{
+    font-size: large;
+    font-weight: bold;
+    color:rgb(227,223,253);
+}
+
+.Product-Description{
+    font-size: large;
+    font-weight: bold;
+    color: rgb(227,223,253);
+}
+
+.Product-Price{
+    font-size: large;
+    font-weight: bold;
+    color: rgb(227,223,253);
+    margin-top: 1%;
+}
+
+.Difficulty-Level{
+    font-size: large;
+    font-weight: bold;
+    color: rgb(227,223,253);
+    margin-top: 1%;
+}
+
+.Number-Players{
+    font-size: large;
+    font-weight: bold;
+    color: rgb(227,223,253);
+    margin-top: 1%;
+}
+
+.Game-Duration{
+    font-size: large;
+    font-weight: bold;
+    color: rgb(227,223,253);
+    margin-top: 1%;
+}
+
+.Product-Publisher{
+    font-size: large;
+    font-weight: bold;
+    color: rgb(227,223,253);
+    margin-top: 1%;
+}
+
+.Recommended-age{
+    font-size: large;
+    font-weight: bold;
+    color: rgb(227,223,253);
+    margin-top: 1%;
+}
+
+.Main-Genre{
+    font-size: large;
+    font-weight: bold;
+    color: rgb(227,223,253);
+}
+
+.Product-Image{
+    font-size: large;
+    font-weight: bold;
+    color: rgb(227,223,253);
+    margin-top: 1%;
+}
+
+#NewProductButton{
+    color: rgb(227,223,253);
+    background-color:rgb(72,149,239);
+    margin-top: 1%;
+    /* margin-left: 48%; */
+    border-color: rgb(227,223,253);
+}
+
+#NewProductButton:hover{
+    background-color:rgb(181,23,158);
+    border-color:rgb(227,223,253);
+}
+
+#AddProduct {
+    display: flex;
+    flex-direction: row;
+}
+
+#Block2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+#Block2Item {
+    width: 16rem;
+}
+
+#Block3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+#Block3Item {
+    width: 16rem;
+}
+
+
+@media (max-width: 42.5rem) { 
+    #FormContainer {
+        margin-top: 10%;
+
+    }
+
+    #NewProductButton {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        
+    }
+
+    #Add-Product {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        }
+
+   #Block1Item {
+            width: 20.625rem;
+            
+    }
+    
+
+    #Block2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #Block3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    #Block3Item {
+        width: 20.625rem;
+        
+    }
+
+ }
