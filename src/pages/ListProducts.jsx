@@ -164,10 +164,17 @@ const ListProducts = () => {
         <>
         
             <Container className="mb-5">
-                <Button className="block--search-container" id="SearchButton">
-                    <label htmlFor="">Search</label>
-                    <input type="input" placeholder="..."onChange={handleSearch} />
-                </Button>
+
+            <Form className="d-flex" id="SearchButton">
+                <Form.Control
+                type="search"
+                placeholder="Search"
+                className="me-2"
+                aria-label="Search"
+                onChange={handleSearch}
+                />
+                
+          </Form>
                 <Row>
                     {/* {
                         list.map((product, index) => (
