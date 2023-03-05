@@ -1,9 +1,9 @@
 import React from 'react'
 import {
     BrowserRouter,
-    Routes, 
+    Routes,
     Route
-} from "react-router-dom"; 
+} from "react-router-dom";
 import App from '../pages/App'
 import NewProduct from '../pages/NewProduct'
 
@@ -11,11 +11,11 @@ import NewProduct from '../pages/NewProduct'
 const Router = () => {
     return (
         <BrowserRouter>
-        <Routes> 
-            <Route path='/' element={<App/>} /> 
-            <Route path='/new' element={<NewProduct/>} /> 
-            {/* <Route path='/edit' element={<EditProduct/>} /> */}
-        </Routes>
+            <Routes>
+                <Route path='/' element={<App />} />
+                <Route path='/new' element={<NewProduct />} />
+                {/* <Route path='/edit' element={<EditProduct/>} /> */}
+            </Routes>
         </BrowserRouter>
     )
 }

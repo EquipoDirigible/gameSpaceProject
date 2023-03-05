@@ -2,16 +2,16 @@ import ProductsService from "../services/productsService";
 
 const ProductsHandler = {
 
-    getData(){
+    getData() {
         return ProductsService.getData();
     },
     addProduct(newProduct) {
-            if (!newProduct) {
-                return;
-            }
-    
-            let product = {
-            "title": newProduct.title, 
+        if (!newProduct) {
+            return;
+        }
+
+        let product = {
+            "title": newProduct.title,
             "description": newProduct.description,
             "price": newProduct.price,
             "difficulty": newProduct.difficulty,
@@ -21,23 +21,23 @@ const ProductsHandler = {
             "age": newProduct.age,
             "genre": newProduct.genre,
             "image": newProduct.image
-            }
-            ProductsService.addProduct(product);
-            return newProduct;
+        }
+        ProductsService.addProduct(product);
+        return newProduct;
     },
-    deleteProduct(id){
+    deleteProduct(id) {
         return ProductsService.deleteProduct(id);
     },
     editProduct(id, editedProduct) {
         if (!editedProduct) {
-            return; 
-        } 
-        
+            return;
+        }
+
         let editedProductForm = {
-        
-            "title" : title,
-            "description" : description, 
-            "price": price, 
+
+            "title": title,
+            "description": description,
+            "price": price,
             "difficulty": difficulty,
             "players": players,
             "duration": duration,
@@ -49,7 +49,7 @@ const ProductsHandler = {
 
         return ProductsService.editProduct(id, editedProductForm);
     }
-} 
+}
 
 
 export default ProductsHandler; 
