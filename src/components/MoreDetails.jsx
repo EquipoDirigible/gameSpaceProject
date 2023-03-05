@@ -49,12 +49,16 @@ console.log(product)
                                   <td><strong>Recommended age</strong></td>
                                   <td>{product.age} years </td>
                                 </tr>
+                                <tr>
+                                  <td><strong>Available units in stock</strong></td>
+                                  <td>{product.stock} unit/s </td>
+                                </tr>
                               </tbody>
                             </Table>
                           </Card.Text>
                         </Card.Body>
                   </Card>
-                  <Counter initial={1} stock={99} />
+                  <Counter initial={product.stock} stock={99} />
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
