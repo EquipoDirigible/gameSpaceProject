@@ -35,7 +35,7 @@ function NewNavbar({handleSearch}) {
               className="me-2"
               aria-label="Search"
             />
-            <Button variant="outline-success" onClick={handleSearch}>Search</Button>
+            <Button variant="outline-success" onChange={handleSearch}>Search</Button>
                 
           </Form>
         </Navbar.Collapse>
