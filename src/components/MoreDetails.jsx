@@ -1,4 +1,4 @@
-import React  from 'react';
+import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Card from 'react-bootstrap/Card';
@@ -7,12 +7,12 @@ import "./stylesheets/MoreDetails.css";
 import Counter from './Counter';
 
 
-const MoreDetails = ({show, handleClose, product} ) =>{
-console.log(product)
-  
-    return(
-        <Modal show={show} onHide={handleClose} size="lg">
-        <Modal.Header closeButton>
+const MoreDetails = ({ show, handleClose, product }) => {
+  console.log(product)
+
+  return (
+    <Modal show={show} onHide={handleClose} size="lg">
+      <Modal.Header closeButton>
         <Modal.Title id="ProductTitle"> {product.price}€ - {product.title}  </Modal.Title>
         </Modal.Header>
         <Modal.Body>
