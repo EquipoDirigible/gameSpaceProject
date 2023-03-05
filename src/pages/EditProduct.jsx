@@ -14,7 +14,7 @@ const EditProduct = () => {
     const navigate = useNavigate.apply()
     const URL = "http://localhost:3000/products"
 
-    const [productId, setProductId] = useState(product.id)
+    
     const [productTitle, setProductTitle] = useState(product.title)
     const [productDescription, setProductDescription] = useState(product.description)
     const [productPrice, setProductPrice] = useState(product.price)
@@ -25,6 +25,7 @@ const EditProduct = () => {
     const [productAge, setProductAge] = useState(product.age)
     const [productGenre, setProductGenre] = useState(product.genre)
     const [productImage, setProductImage] = useState(product.image)
+    const [productStock, setProductStock] = useState(product.stock)
 
     const handleProductTitleChange = ((event) => {
         let titleInput = event.target.value;
@@ -70,6 +71,10 @@ const EditProduct = () => {
         let genreInput = event.target.value;
         setProductGenre(genreInput);
     })
+    const handleProductStockChange = ((event) => {
+        let stockInput = event.target.value;
+        setProductStock(stockInput);
+    })
 
     const handleProductImageChange = ((event) => {
         const file = event.target.files[0];
@@ -92,6 +97,7 @@ const EditProduct = () => {
             productPublisher,
             productAge,
             productGenre,
+            productStock,
             productImage
         };
         ProductsHandler.editProduct(id, editedProduct);
@@ -220,6 +226,15 @@ const EditProduct = () => {
                                 onChange={handleProductGenreUpdate} />
                         </Form.Group>
                     </Row>
+                    <Form.Group as={Col} className="mb-3">
+                            <Form.Label> Available stock </Form.Label>
+                            <Form.Control
+                                type="number"
+                                placeholder="Available stock"
+                                name="stock"
+                                value={stock}
+                                onChange={handleProductStockUpdate} />
+                        </Form.Group>
                     <Form.Group className="mb-3">
                         <Form.Label> Product Image </Form.Label>
                         <Form.Control

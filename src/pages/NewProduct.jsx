@@ -26,6 +26,7 @@ const NewProduct = () => {
     const [productPublisher, setProductPublisher] = useState("")
     const [productAge, setProductAge] = useState(null)
     const [productGenre, setProductGenre] = useState("")
+    const [productStock, setProductStock] = useState(null)
     const [productImage, setProductImage] = useState(null)
 
     const handleProductTitleChange = ((event) => {
@@ -63,6 +64,9 @@ const NewProduct = () => {
     const handleProductGenreChange = ((event) => {
         setProductGenre(event.target.value)
     })
+    const handleProductStockChange = (event) => {
+        setProductStock(event.target.value)
+    }
 
     const handleProductImageChange = (event) => {
         const file = event.target.files[0];
@@ -208,6 +212,15 @@ const NewProduct = () => {
                         name="genre"
                         value={productGenre}
                         onChange={handleProductGenreChange}/>
+                    </Form.Group>
+                    <Form.Group as={Col} className="Main-Genre">
+                        <Form.Label> Available stock </Form.Label>
+                        <Form.Control id="Block3Item"
+                        type="text"
+                        placeholder="Available stock"
+                        name="stock"
+                        value={productStock}
+                        onChange={handleProductStockChange}/>
                     </Form.Group>
                 </div>
                     <Form.Group className="Product-Image">

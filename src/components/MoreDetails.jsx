@@ -58,7 +58,7 @@ const MoreDetails = ({ show, handleClose, product }) => {
                           </Card.Text>
                         </Card.Body>
                   </Card>
-                  <Counter initial={product.stock} stock={99} />
+                  
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>

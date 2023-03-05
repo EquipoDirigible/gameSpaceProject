@@ -28,6 +28,7 @@ const ListProducts = () => {
     const [publisher, setPublisher] = useState();
     const [age, setAge] = useState();
     const [genre, setGenre] = useState();
+    const [stock, setStock] = useState();
     const [image, setImage] = useState();
 
     const handleProductTitleUpdate = (event) => {
@@ -56,6 +57,9 @@ const ListProducts = () => {
     }
     const handleProductGenreUpdate = (event) => {
         setGenre(event.target.value)
+    }
+    const handleProductStockUpdate = (event) => {
+        setStock(event.target.value)
     }
     const handleProductImageUpdate = (event) => {
         const file = event.target.files[0];
@@ -133,6 +137,7 @@ const ListProducts = () => {
             "publihser": publisher,
             "age": age,
             "genre": genre,
+            "stock": stock,
             "image": image
         }
         // console.log(id)
@@ -271,6 +276,14 @@ const ListProducts = () => {
                                     name="genre"
                                     placeholder={editedProduct.genre}
                                     onChange={handleProductGenreUpdate} />
+                            </Form.Group>
+                            <Form.Group as={Col} className="mb-3">
+                                <Form.Label> Available stock </Form.Label>
+                                <Form.Control
+                                    type="number"
+                                    name="stock"
+                                    placeholder={editedProduct.stock}
+                                    onChange={handleProductStockUpdate} />
                             </Form.Group>
                         </Row>
                         <Form.Group className="mb-3">
