@@ -117,14 +117,14 @@ const NewProduct = () => {
     return (
         <>
         <NewNavbar/>
-        <div className="Page col-md">
+        <div className="Page col-xs">
         <Container id="FormContainer">
             <h1 className="text-center"> Add Product </h1>
                 <Form  onSubmit={handleSubmit}>
-                <Row className="Add-Product">
+                <div id="Add-Product"className="Add-Product">
                     <Form.Group as={Col} className="Product-Name">
                         <Form.Label> Product Name </Form.Label>
-                        <Form.Control
+                        <Form.Control id="Block1Item"
                         type="text"
                         placeholder="Enter product name"
                         name="title"
@@ -133,18 +133,18 @@ const NewProduct = () => {
                     </Form.Group>
                     <Form.Group as={Col} className="Product-Description">
                         <Form.Label>Product Description </Form.Label>
-                        <Form.Control
+                        <Form.Control id="Block1Item"
                         type="text"
                         placeholder="Enter product description"
                         name="description"
                         value={productDescription}
                         onChange={handleProductDescriptionChange}/>
                     </Form.Group>
-                </Row>
-                <Row className="mb-3">
+                </div>
+                <div id="Block2" className="mb-3">
                     <Form.Group as={Col} className="Product-Price">
                         <Form.Label> Product Price </Form.Label>
-                        <Form.Control
+                        <Form.Control id="Block2Item"
                         type="number"
                         placeholder="Enter product price"
                         name="price"
@@ -153,7 +153,7 @@ const NewProduct = () => {
                     </Form.Group>
                     <Form.Group as={Col} className="Difficulty-Level">
                         <Form.Label> Select Product Difficulty Level </Form.Label>
-                        <Form.Select
+                        <Form.Select id="Block2Item"
                         name="difficulty"
                         onChange={handleProductDifficultyChange}>
                             <option value="Easy">Easy</option>
@@ -163,7 +163,7 @@ const NewProduct = () => {
                     </Form.Group>
                     <Form.Group as={Col} className="Number-Players">
                         <Form.Label> Product Number of Players </Form.Label>
-                        <Form.Control
+                        <Form.Control id="Block2Item"
                         type="number"
                         placeholder="Enter product max number of players"
                         name="players"
@@ -172,18 +172,18 @@ const NewProduct = () => {
                     </Form.Group>
                     <Form.Group as={Col} className="Game-Duration">
                         <Form.Label> Game Duration </Form.Label>
-                        <Form.Control
+                        <Form.Control id="Block2Item"
                         type="number"
                         placeholder="Enter average game duration"
                         name="duration"
                         value={productDuration}
                         onChange={handleProductDurationChange}/>
                     </Form.Group>
-                </Row>
-                <Row className="Product-Publisher">
+                </div>
+                <div id="Block3" className="Product-Publisher">
                     <Form.Group as={Col} className="mb-3">
                         <Form.Label> Product Publisher </Form.Label>
-                        <Form.Control
+                        <Form.Control id="Block3Item"
                         type="text"
                         placeholder="Product Publisher"
                         name="publisher"
@@ -192,7 +192,7 @@ const NewProduct = () => {
                     </Form.Group>
                     <Form.Group as={Col} className="Recommended-Age">
                         <Form.Label> Recommended age </Form.Label>
-                        <Form.Control
+                        <Form.Control id="Block3Item"
                         type="number"
                         placeholder="Product recommended age"
                         name="age"
@@ -201,14 +201,14 @@ const NewProduct = () => {
                     </Form.Group>
                     <Form.Group as={Col} className="Main-Genre">
                         <Form.Label> Product Genre </Form.Label>
-                        <Form.Control
+                        <Form.Control id="Block3Item"
                         type="text"
                         placeholder="Product main genre"
                         name="genre"
                         value={productGenre}
                         onChange={handleProductGenreChange}/>
                     </Form.Group>
-                </Row>
+                </div>
                     <Form.Group className="Product-Image">
                         <Form.Label> Product Image </Form.Label>
                         <Form.Control
