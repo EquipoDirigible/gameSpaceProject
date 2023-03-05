@@ -1,12 +1,12 @@
-import React , { useState } from 'react';
+import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import {Container} from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col';
 import axios from 'axios';
 import Swal from 'sweetalert2';
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom';
 import "../components/stylesheets/NewProduct.css";
 import NewNavbar from '../components/NewNavBar';
 import Footer from '../components/Footer';
@@ -15,7 +15,7 @@ import Footer from '../components/Footer';
 const NewProduct = () => {
     const navigate = useNavigate.apply()
 
-    const URL = "http://localhost:3000/products" 
+    const URL = "http://localhost:3000/products"
 
     const [productTitle, setProductTitle] = useState("")
     const [productDescription, setProductDescription] = useState("")
@@ -28,39 +28,39 @@ const NewProduct = () => {
     const [productGenre, setProductGenre] = useState("")
     const [productImage, setProductImage] = useState(null)
 
-    const handleProductTitleChange=((event) => {
+    const handleProductTitleChange = ((event) => {
         setProductTitle(event.target.value)
     })
 
-    const handleProductDescriptionChange=((event) => {
+    const handleProductDescriptionChange = ((event) => {
         setProductDescription(event.target.value)
     })
 
-    const handleProductPriceChange=((event) => {
+    const handleProductPriceChange = ((event) => {
         setProductPrice(event.target.value)
     })
 
-    const handleProductDifficultyChange=((event) => {
+    const handleProductDifficultyChange = ((event) => {
         setProductDifficulty(event.target.value)
     })
 
-    const handleProductPlayersChange=((event) => {
+    const handleProductPlayersChange = ((event) => {
         setProductPlayers(event.target.value)
     })
 
-    const handleProductDurationChange=((event) => {
+    const handleProductDurationChange = ((event) => {
         setProductDuration(event.target.value)
     })
 
-    const handleProductPublisherChange=((event) => {
+    const handleProductPublisherChange = ((event) => {
         setProductPublisher(event.target.value)
     })
 
-    const handleProductAgeChange=((event) => {
+    const handleProductAgeChange = ((event) => {
         setProductAge(event.target.value)
     })
 
-    const handleProductGenreChange=((event) => {
+    const handleProductGenreChange = ((event) => {
         setProductGenre(event.target.value)
     })
 
@@ -78,18 +78,19 @@ const NewProduct = () => {
         // event.preventDefault();
         // productsHandler.addProduct(newProduct);
         event.preventDefault();
-            let newProduct = {
-                "title": productTitle, 
-                "description": productDescription, 
-                "price": productPrice, 
-                "difficulty": productDifficulty, 
-                "players": productPlayers, 
-                "duration": productDuration, 
-                "publisher": productPublisher, 
-                "age": productAge, 
-                "genre": productGenre, 
-                "image": productImage};
-            console.log(newProduct)
+        let newProduct = {
+            "title": productTitle,
+            "description": productDescription,
+            "price": productPrice,
+            "difficulty": productDifficulty,
+            "players": productPlayers,
+            "duration": productDuration,
+            "publisher": productPublisher,
+            "age": productAge,
+            "genre": productGenre,
+            "image": productImage
+        };
+        console.log(newProduct)
         const response = await axios.post(URL, newProduct);
         if (response.status === 201) {
             Swal.fire({
@@ -98,12 +99,12 @@ const NewProduct = () => {
                 showConfirmButton: true,
                 showClass: {
                     popup: 'animate__animated animate__fadeInDown'
-                  },
-                  hideClass: {
+                },
+                hideClass: {
                     popup: 'animate__animated animate__fadeOutUp'
-                  }
-              })
-              navigate('/');
+                }
+            })
+            navigate('/');
         } else {
             Swal.fire({
                 icon: 'error',

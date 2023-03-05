@@ -1,13 +1,14 @@
 import React, { useState } from "react";
-import { BsEnvelope, 
-    BsGear,
-    BsGraphUp,
-    BsBoxSeam,
-    BsTags,
-    BsWallet,
-    BsStar,
-    BsBoxArrowInLeft,
-    BsBoxArrowInRight
+import {
+  BsEnvelope,
+  BsGear,
+  BsGraphUp,
+  BsBoxSeam,
+  BsTags,
+  BsWallet,
+  BsStar,
+  BsBoxArrowInLeft,
+  BsBoxArrowInRight
 } from "react-icons/bs";
 import "../components/stylesheets/SideBar.css";
 
@@ -20,7 +21,7 @@ function Sidebar() {
 
   return (
     <div className={`sidebar ${collapsed ? "collapsed" : ""}`}>
-      
+
       <div className="sidebar-menu">
         <ul>
           <li>

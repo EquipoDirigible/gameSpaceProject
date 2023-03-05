@@ -8,7 +8,7 @@ import {
   MDBRow,
   MDBBtn
 } from 'mdb-react-ui-kit';
-import './stylesheets/Footer.css'; 
+import './stylesheets/Footer.css';
 export default function Footer() {
   return (
     <MDBFooter className='text-center ' color='white' bgColor='dark'>
@@ -80,7 +80,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a href='#!' className='text-white'>
-                  Work with us
+                    Work with us
                   </a>
                 </li>
               </ul>
@@ -131,8 +131,8 @@ export default function Footer() {
               </ul>
             </MDBCol>
 
-            
-           
+
+
           </MDBRow>
         </section>
       </MDBContainer>

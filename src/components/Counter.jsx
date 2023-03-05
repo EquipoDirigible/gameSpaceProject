@@ -3,7 +3,7 @@ import { useState } from 'react';
 import './stylesheets/Counter.css'
 
 
-const Counter = ({initial, stock }) => {
+const Counter = ({ initial, stock }) => {
   //initial = 1; //El número inicial de un contador, por sentido común tiene que ser mayor o igual a 1
   //stock = 7; //Limita el count, pensado en el stock de un producto
 
@@ -17,8 +17,8 @@ const Counter = ({initial, stock }) => {
   };
 
   return (
-    <div className="count-container"> 
-      <div className="count-container__contador"> 
+    <div className="count-container">
+      <div className="count-container__contador">
         <button
           className="count-container__button"
           onClick={() => addProduct(-1)}
