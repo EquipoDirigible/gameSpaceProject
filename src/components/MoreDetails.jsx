@@ -4,7 +4,7 @@ import Modal from 'react-bootstrap/Modal';
 import Card from 'react-bootstrap/Card';
 import Table from 'react-bootstrap/Table';
 import "./stylesheets/MoreDetails.css";
-import Counter from './Counter';
+
 
 
 const MoreDetails = ({ show, handleClose, product }) => {

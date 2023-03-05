@@ -70,8 +70,6 @@ const ListProducts = () => {
         };
     };
 
-
-
     const getData = async () => {
         const response = axios.get(URL);
         return response;
@@ -116,9 +114,9 @@ const ListProducts = () => {
         })
     }
     const handleUpdate = async (editedProduct) => {
-        // console.log(editedProduct)
+        
         handleOpen();
-        // console.log(id)
+    
         if (!editedProduct) {
             return;
         }
@@ -140,28 +138,7 @@ const ListProducts = () => {
             "stock": stock,
             "image": image
         }
-        // console.log(id)
-        await axios.patch(`http://localhost:3000/products/${editedProduct.id}`, editedProductForm)
-
-            .then((response) => {
-                if (response.status === 200) {
-                    Swal.fire({
-                        icon: 'success',
-                        title: 'Product edited',
-                        showConfirmButton: true,
-                        showClass: {
-                            popup: 'animate__animated animate__fadeInDown'
-                        },
-                        hideClass: {
-                            popup: 'animate__animated animate__fadeOutUp'
-                        }
-                    })
-                }
-              
-            })
-
-        }
-    
+        await axios.patch(`http://localhost:3000/products/${editedProduct.id}`, editedProductForm)}
 
     useEffect(() => {
         
