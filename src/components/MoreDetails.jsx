@@ -25,7 +25,7 @@ console.log(product)
                               <tbody>
                                 <tr>
                                   <td><strong>Editorial</strong></td>
-                                  <td>EDITORIAL CALL HERE</td>
+                                  <td>{product.publisher}</td>
                                 </tr>
                                 <tr>
                                   <td><strong>Genre</strong></td>

@@ -118,8 +118,6 @@ const ListProducts = () => {
         }
         setEditedProduct(editedProduct)
 
-        // console.log(editedProductForm)
-
     }
     const handleSubmit = async () => {
         let editedProductForm = {
@@ -152,14 +150,14 @@ const ListProducts = () => {
                         }
                             }) 
                 }
-                // setList()
+              
             })
 
         }
-    // UseState para grabar la información como estado, cada vez que cambie vuelve a renderizarse
+    
 
     useEffect(() => {
-        // UseEffect Body se ejecuta desde el principio de la aplicación 
+        
         getData().then((response) => {
             setList(response.data);
         })
