@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 
 function NewNavbar() {
   return (
-    <Navbar className='navbarcolor' expand="lg" fixed="top" >
+    <Navbar className='navbarContainer' expand="lg" fixed="top" >
       <Container fluid>
         <Navbar.Brand href="#">Game-Space</Navbar.Brand>
         <img src="src\assets\logo-navbar.png" className='LogoGameSpaceNavbar'/>
