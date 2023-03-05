@@ -33,20 +33,21 @@ const ProductsHandler = {
             return; 
         } 
         
-        let editProductForm = {
-            "title": editedProduct.title, 
-            "description": editedProduct.description,
-            "price": editedProduct.price,
-            "difficulty": editedProduct.difficulty,
-            "players": editedProduct.players,
-            "duration": editedProduct.duration,
-            "publisher": editedProduct.publisher,
-            "age": editedProduct.age,
-            "genre": editedProduct.genre,
-            "image": editedProduct.image
+        let editedProductForm = {
+        
+            "title" : title,
+            "description" : description, 
+            "price": price, 
+            "difficulty": difficulty,
+            "players": players,
+            "duration": duration,
+            "publihser": publisher,
+            "age": age,
+            "genre": genre,
+            "image": image
         }
 
-        return ProductsService.editProduct(id, editProductForm);
+        return ProductsService.editProduct(id, editedProductForm);
     }
 } 
 

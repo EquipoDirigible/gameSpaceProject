@@ -1,11 +1,11 @@
 import React , { useState } from 'react';
-import {Card , ListGroup, ListGroupItem, Button} from 'react-bootstrap';
+import {Card , Button} from 'react-bootstrap';
 import MoreDetails from './MoreDetails';
 import './stylesheets/ProductCard.css';  
 import { BsGearWide } from 'react-icons/bs';
 import { BsFillXCircleFill } from 'react-icons/bs';
 import { BsStarFill } from 'react-icons/bs';
-// import {Link} from "react-router-dom";
+
 
 
 const ProductCard = ({product, handleDelete, handleUpdate}) => {
@@ -14,13 +14,14 @@ const ProductCard = ({product, handleDelete, handleUpdate}) => {
     const handleShow = () => setShow(true);
 
 
+
     return (
     <>
     <div className="col-md-4">
             <MoreDetails show={show} handleClose={handleClose} product={product}/> 
         <Card id="CardBackground" style={{ width: '17.rem'}}> 
             <div id="CardHeader"><Card.Header className="text-center text-uppercase card-header"> 
-                {product.price} - {product.title}
+                {product.price}€ - {product.title}
             </Card.Header></div>
                 <img src={product.image} alt={product.title} className="card-img-top image-card"/> 
             <Card.Body> 
@@ -30,14 +31,6 @@ const ProductCard = ({product, handleDelete, handleUpdate}) => {
                     <Button className="Method" variant="secondary" onClick={() => handleDelete(product.id)}> <BsFillXCircleFill /></Button> 
                     <Button className="Method" variant="secondary"> <BsStarFill /> </Button>     
                 </div>
-                    
-                    {/* <ListGroup>   */}
-                         {/* <ListGroupItem> <strong> </strong> {product.description}</ListGroupItem> 
-                         <ListGroupItem> <stron> Difficulty: </stron> {product.difficulty}</ListGroupItem>
-                        <ListGroupItem> <stron>Price 🇪🇺: </stron> {product.price}</ListGroupItem>
-                        <ListGroupItem> <stron> Game time in minutes: </stron> {product.duration}</ListGroupItem>
-                        <ListGroupItem> <stron> Max number of players: </stron> {product.players}</ListGroupItem>  */}
-                    {/* </ListGroup>  */}
                               
             <div id="CardFooter"><Card.Footer className="text-muted, text-center">Last update: 1 month ago </Card.Footer></div>
             <Button variant="secondary" onClick={handleShow}>More details </Button> 
@@ -45,6 +38,7 @@ const ProductCard = ({product, handleDelete, handleUpdate}) => {
         </Card>
     </div>
     </> )}
+
 
 
 export default ProductCard ;

@@ -3,9 +3,9 @@ import './App.css'
 import Footer from '../components/Footer'                                                                                   
 import '../components/stylesheets/reset.css'
                                                                                   
-import ListProducts from '../components/ListProducts'
+import ListProducts from '../pages/ListProducts'
 import NewNavbar from '../components/NewNavBar'
-import '../container/App.css'
+import '../components/stylesheets/App.css'
 import SideBar from '../components/SideBar'
 import '../components/stylesheets/sidebar.css'
 

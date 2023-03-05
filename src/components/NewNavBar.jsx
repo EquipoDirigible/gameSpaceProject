@@ -21,7 +21,7 @@ function NewNavbar() {
             style={{ maxHeight: '100px' }}
             navbarScroll>
              <Link to="/" className="navbar-brand">Home</Link>
-             <Link to="/new" className="nav-link"> New </Link> 
+             <Link to="/new" className="nav-link"> Add Product </Link> 
             
           </Nav>
           <Form className="d-flex">

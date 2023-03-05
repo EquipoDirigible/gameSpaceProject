@@ -5,8 +5,6 @@ import {Container, Row, Modal, Button, Form, Col}  from 'react-bootstrap';
 import Swal from 'sweetalert2';
 
 
-
-
 const ListProducts = () => {
 
     const URL = "http://localhost:3000/products" 
@@ -193,7 +191,7 @@ const ListProducts = () => {
                 <Modal.Header closeButton>
                     <Modal.Title>Edit product</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>Woohoo, you're reading this text in a modal!
+                <Modal.Body>
                 <Form onSubmit={handleSubmit}>
                 <Row className="mb-3">
                     <Form.Group as={Col} className="mb-3">
@@ -289,11 +287,7 @@ const ListProducts = () => {
                     </Form> 
                 </Modal.Body>
                 
-                <Modal.Footer>
-                    {/* <Button variant="secondary" type="reset" onClick={handleClose}>
-                        Close
-                    </Button> */}
-                    
+                <Modal.Footer>                    
                 </Modal.Footer>
             </Modal>
     </>

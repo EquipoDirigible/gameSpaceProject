@@ -4,7 +4,7 @@ import Modal from 'react-bootstrap/Modal';
 import Card from 'react-bootstrap/Card';
 import Table from 'react-bootstrap/Table';
 import "./stylesheets/MoreDetails.css";
-// import {ListGroup, ListGroupItem} from 'react-bootstrap';
+import Counter from './Counter';
 
 
 const MoreDetails = ({show, handleClose, product} ) =>{
@@ -13,7 +13,7 @@ console.log(product)
     return(
         <Modal show={show} onHide={handleClose} size="lg">
         <Modal.Header closeButton>
-        <Modal.Title id="ProductTitle"> {product.price} - {product.title}  </Modal.Title>
+        <Modal.Title id="ProductTitle"> {product.price}€ - {product.title}  </Modal.Title>
         </Modal.Header>
         <Modal.Body>
                   <Card className="text-center" style={{ width: '90%'}} border="light">
@@ -26,6 +26,10 @@ console.log(product)
                                 <tr>
                                   <td><strong>Editorial</strong></td>
                                   <td>EDITORIAL CALL HERE</td>
+                                </tr>
+                                <tr>
+                                  <td><strong>Genre</strong></td>
+                                  <td>{product.genre}</td>
                                 </tr>
                                 <tr>
                                   <th><strong>Difficulty</strong></th>
@@ -41,11 +45,16 @@ console.log(product)
                                   <td><strong>Max number of players</strong></td>
                                   <td>{product.players}</td>
                                 </tr>
+                                <tr>
+                                  <td><strong>Recommended age</strong></td>
+                                  <td>{product.age} years </td>
+                                </tr>
                               </tbody>
                             </Table>
                           </Card.Text>
                         </Card.Body>
                   </Card>
+                  <Counter initial={1} stock={99} />
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
