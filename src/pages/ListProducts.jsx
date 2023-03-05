@@ -3,12 +3,25 @@ import axios from 'axios';
 import ProductCard from '../components/ProductCard';
 import { Container, Row, Modal, Button, Form, Col } from 'react-bootstrap';
 import Swal from 'sweetalert2';
+import '../components/stylesheets/ListProducts.css';
+
 
 
 const ListProducts = () => {
 
     const URL = "http://localhost:3000/products"
     const [list, setList] = useState([]);
+    const [searchValue, setSearchValue] = useState("");
+    const handleSearch = (event) => {
+      let searchInput = event.target.value;
+      setSearchValue(searchInput);
+    
+      console.log(searchInput);
+    }
+    
+    let filteredProducts = list.filter(product => {
+      return product.title.toLowerCase().includes(searchValue.toLowerCase());
+    });
 
     // Edit modal-related
     const [showModal, setShowModal] = useState(false);
@@ -169,9 +182,14 @@ const ListProducts = () => {
 
     return (
         <>
+        
             <Container className="mb-5">
+                <Button className="block--search-container" id="SearchButton">
+                    <label htmlFor="">Search</label>
+                    <input type="input" placeholder="..."onChange={handleSearch} />
+                </Button>
                 <Row>
-                    {
+                    {/* {
                         list.map((product, index) => (
                             <ProductCard
                                 key={index}
@@ -181,7 +199,17 @@ const ListProducts = () => {
                                 handleOpen={handleOpen}
                             />
                         ))
-                    }
+                    } */}
+                    {filteredProducts.map((product, index) => (
+                        <ProductCard
+                        key={product.id}
+                        product={product}
+                        handleDelete={handleDelete}
+                        handleUpdate={handleUpdate}
+                        handleOpen={handleOpen}
+                        // handleSearch={handleSearch}
+                        />
+                ))}
                 </Row>
             </Container>
             <Modal
@@ -292,6 +320,7 @@ const ListProducts = () => {
                 <Modal.Footer>
                 </Modal.Footer>
             </Modal>
+
         </>
     )
 }
