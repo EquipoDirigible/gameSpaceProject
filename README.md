@@ -58,10 +58,9 @@ Run the npm start command to run the React app. It will automatically open the l
 - Methodology Agile with Scrum.
 - Mob Programming.
 - Pair Programming.
-- TDD.
 	
 ## 🧪Next Steps:
-	+ Commit to improve the arachitecture of this application towards a more atomic design.
+	+ Commit to improve the architecture of this application towards a more atomic design.
 	+ Implement a proper testing environment.
 	+ Add functionality to "Favorite" button in ProductCard's view.
 	+ Add functionality to sidebar buttons.
