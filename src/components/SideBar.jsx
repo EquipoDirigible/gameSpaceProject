@@ -27,7 +27,7 @@ function Sidebar() {
           <li>
             <a href="#">
               <BsBoxSeam className="sidebar-icon" />
-              {!collapsed && <span className="sidebar-text">You Product</span>}
+              {!collapsed && <span className="sidebar-text">Your Products</span>}
             </a>
           </li>
           <li>
